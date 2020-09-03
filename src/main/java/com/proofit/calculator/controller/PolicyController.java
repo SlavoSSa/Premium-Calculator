@@ -1,13 +1,17 @@
 package com.proofit.calculator.controller;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.proofit.calculator.domain.Policy;
+import com.proofit.calculator.domain.PolicyObject;
+import com.proofit.calculator.domain.PolicySubObject;
 import com.proofit.calculator.service.PolicyService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.math.BigDecimal;
 
 @RestController
-@RequestMapping("/api/v1/policy")
+@RequestMapping("/api/v1/policies")
 public class PolicyController {
 
 
@@ -19,8 +23,30 @@ public class PolicyController {
     }
 
     @GetMapping("/hello")
-    public String getHello(){
+    public String getHello() throws JsonProcessingException {
        return policyService.helloMethod();
+    }
+
+    @GetMapping("/")
+    public Policy testJsonPolicy(){
+        return policyService.testJsonPolicy();
+    }
+
+
+    @PostMapping("/test")
+    public Policy testPost(@RequestBody Policy policy){
+        return policyService.getPol(policy);
+    }
+
+
+    @PostMapping("/test1")
+    public PolicyObject testPostSu(@RequestBody PolicyObject policyObject){
+        return policyObject;
+    }
+
+    @PostMapping("/calculator")
+    public BigDecimal calculatePremium (@RequestBody Policy policy){
+        return policyService.calculate(policy);
     }
 
 }

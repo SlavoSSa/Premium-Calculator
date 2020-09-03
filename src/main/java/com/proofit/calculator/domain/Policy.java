@@ -1,15 +1,19 @@
 package com.proofit.calculator.domain;
 
+import java.util.List;
 import java.util.Objects;
 
 public class Policy {
 
     private String number;
-    private String status;
+    private PolicyStatus status;
+    private List<PolicyObject> policyObjects;
 
-    public Policy(String number, String status) {
+    public Policy() { }
+
+    public Policy(String number, PolicyStatus status) {
         this.number = number;
-        this.status= status;
+        this.status = status;
     }
 
 
@@ -17,18 +21,25 @@ public class Policy {
         return number;
     }
 
-    public String getStatus() {
-        return status;
-    }
-
     public void setNumber(String number) {
         this.number = number;
     }
 
-    public void setStatus(String status) {
+    public PolicyStatus getStatus() {
+        return status;
+    }
+
+    public void setStatus(PolicyStatus status) {
         this.status = status;
     }
 
+    public List<PolicyObject> getPolicyObjects() {
+        return policyObjects;
+    }
+
+    public void setPolicyObjects(List<PolicyObject> policyObjects) {
+        this.policyObjects = policyObjects;
+    }
 
     @Override
     public String toString() {
@@ -49,7 +60,7 @@ public class Policy {
 
     @Override
     public int hashCode() {
-        return Objects.hash(number,status);
+        return Objects.hash(number, status);
     }
 
 }

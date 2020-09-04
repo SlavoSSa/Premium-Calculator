@@ -21,7 +21,7 @@ public class PolicyController {
     }
 
 
-    @GetMapping("/premiumCalculator")
+    @GetMapping("/calculate-premium")
     public BigDecimal calculatePremium (@RequestBody Policy policy){
         return Optional.ofNullable(policyService.calculatePolicyPremium(policy))
                 .orElseThrow(() -> new ApiRequestException("Something wrong with policy data"));

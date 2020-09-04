@@ -9,7 +9,8 @@ public class Policy {
     private PolicyStatus status;
     private List<PolicyObject> policyObjects;
 
-    public Policy() { }
+    public Policy() {
+    }
 
     public Policy(String number, PolicyStatus status, List<PolicyObject> policyObjects) {
         this.number = number;

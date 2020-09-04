@@ -7,7 +7,8 @@ public class PolicyObject {
     private String name;
     private List<PolicySubObject> policySubObjects;
 
-    public PolicyObject() { }
+    public PolicyObject() {
+    }
 
     public PolicyObject(String name, List<PolicySubObject> policySubObjects) {
         this.name = name;

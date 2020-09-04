@@ -8,9 +8,10 @@ public class PolicySubObject {
     private BigDecimal insuredSum;
     private RiskType riskType;
 
-    public PolicySubObject(){ }
+    public PolicySubObject() {
+    }
 
-    public PolicySubObject(String name, BigDecimal insuredSum, RiskType riskType){
+    public PolicySubObject(String name, BigDecimal insuredSum, RiskType riskType) {
         this.name = name;
         this.insuredSum = insuredSum;
         this.riskType = riskType;

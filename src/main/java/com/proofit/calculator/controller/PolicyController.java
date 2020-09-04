@@ -1,7 +1,6 @@
 package com.proofit.calculator.controller;
 
 import com.proofit.calculator.domain.Policy;
-import com.proofit.calculator.exception.ApiException;
 import com.proofit.calculator.exception.ApiRequestException;
 import com.proofit.calculator.service.PolicyService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,7 +16,6 @@ public class PolicyController {
 
     private final PolicyService policyService;
 
-    @Autowired
     public PolicyController(PolicyService policyService) {
         this.policyService = policyService;
     }
@@ -25,7 +23,6 @@ public class PolicyController {
 
     @GetMapping("/premiumCalculator")
     public BigDecimal calculatePremium (@RequestBody Policy policy){
-        //return policyService.calculatePolicyPremium(policy);
         return Optional.ofNullable(policyService.calculatePolicyPremium(policy))
                 .orElseThrow(() -> new ApiRequestException("Something wrong with policy data"));
     }

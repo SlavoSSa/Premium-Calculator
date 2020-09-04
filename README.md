@@ -11,13 +11,17 @@ build and run as Java self executable container or using gradle.
 
 # Used technologies and frameworks :
 JAVA 8
+
 Spring Boot 2.3.3 (Spring boot WEB)
+
 Build tool gradle
+
 Jackson data bind
 
 # API reference :
 
 GET http://localhost:8080/api/v1/policies/calculate-premium
+
 Content-Type: application/json
 
 Calculates Premium, example JSON object in body request below 

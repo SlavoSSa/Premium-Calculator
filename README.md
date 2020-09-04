@@ -24,7 +24,8 @@ GET http://localhost:8080/api/v1/policies/calculate-premium
 
 Content-Type: application/json
 
-Calculates Premium, example JSON object in body request below 
+Calculates Premium, example JSON object in body request below
+```
 
 {
   "number": "123",
@@ -54,4 +55,4 @@ Calculates Premium, example JSON object in body request below
   ]
 
 }
-
+```

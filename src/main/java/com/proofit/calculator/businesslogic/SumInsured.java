@@ -1,9 +1,7 @@
-package com.proofit.calculator.service.helpers;
+package com.proofit.calculator.businesslogic;
 
 import static java.math.BigDecimal.ZERO;
-
 import java.math.BigDecimal;
-
 import com.proofit.calculator.domain.RiskType;
 
 public class SumInsured {

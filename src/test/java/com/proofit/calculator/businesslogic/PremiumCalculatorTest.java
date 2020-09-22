@@ -1,10 +1,8 @@
-package com.proofit.calculator.service.helpers;
+package com.proofit.calculator.businesslogic;
 
 import com.proofit.calculator.domain.*;
 import org.junit.jupiter.api.Test;
-
 import static org.junit.jupiter.api.Assertions.*;
-
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
@@ -28,7 +26,6 @@ public class PremiumCalculatorTest {
         List<PolicySubObject> policySubObjects = new ArrayList<>();
         policySubObjects.add(policySubObjectFire);
         policySubObjects.add(policySubObjectTheft);
-
 
         PolicyObject policyObject = new PolicyObject("House", policySubObjects);
 

@@ -1,12 +1,20 @@
 package com.proofit.calculator.domain;
 
+import javax.validation.constraints.*;
 import java.math.BigDecimal;
+
 
 public class PolicySubObject {
 
+    @NotBlank(message = "Policy sub object name is mandatory")
     private String name;
+
+    @DecimalMin(value = "0.00", inclusive = false, message = "Insured sum must be positive and greater then 0")
     private BigDecimal insuredSum;
+
+    @NotNull(message = "Risk type is mandatory")
     private RiskType riskType;
+
 
     public PolicySubObject() {
     }
@@ -41,4 +49,6 @@ public class PolicySubObject {
     public void setRiskType(RiskType riskType) {
         this.riskType = riskType;
     }
+
+
 }

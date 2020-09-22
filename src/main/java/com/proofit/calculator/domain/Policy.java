@@ -1,13 +1,23 @@
 package com.proofit.calculator.domain;
 
+import javax.validation.Valid;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 import java.util.List;
 import java.util.Objects;
 
 public class Policy {
 
+    @NotBlank(message = "Policy number is mandatory")
     private String number;
+
+    @NotNull(message = "Policy status is mandatory")
     private PolicyStatus status;
+
+    @Valid
     private List<PolicyObject> policyObjects;
+
+
 
     public Policy() {
     }
@@ -66,5 +76,7 @@ public class Policy {
     public int hashCode() {
         return Objects.hash(number, status, policyObjects);
     }
+
+
 
 }

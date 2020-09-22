@@ -19,7 +19,7 @@ public enum PolicyStatus {
 
     private int statusIntVal;
 
-    private PolicyStatus(int statusIntVal) {
+    PolicyStatus(int statusIntVal) {
         this.statusIntVal = statusIntVal;
     }
 

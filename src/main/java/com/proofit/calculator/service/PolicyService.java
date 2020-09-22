@@ -1,7 +1,7 @@
 package com.proofit.calculator.service;
 
 import com.proofit.calculator.domain.*;
-import com.proofit.calculator.service.helpers.PremiumCalculator;
+import com.proofit.calculator.businesslogic.PremiumCalculator;
 import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
@@ -18,6 +18,5 @@ public class PolicyService {
     public BigDecimal calculatePolicyPremium(Policy policy) {
         return premiumCalculator.calculatePremium(policy);
     }
-
 
 }

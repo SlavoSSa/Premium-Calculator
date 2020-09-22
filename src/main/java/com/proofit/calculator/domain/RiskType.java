@@ -18,7 +18,7 @@ public enum RiskType {
 
     private int riskTypeIntVal;
 
-    private RiskType(int riskTypeIntVal) {
+    RiskType(int riskTypeIntVal) {
         this.riskTypeIntVal = riskTypeIntVal;
     }
 

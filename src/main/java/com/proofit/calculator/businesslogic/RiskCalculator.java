@@ -1,12 +1,11 @@
-package com.proofit.calculator.service.helpers;
+package com.proofit.calculator.businesslogic;
 
 import com.proofit.calculator.domain.RiskType;
-
 import java.math.BigDecimal;
 
 public interface RiskCalculator {
 
-    default BigDecimal applyIfApplicable(RiskType riskType, BigDecimal sumInsured) {
+    default BigDecimal applyRiskCalculationIfApplicable(RiskType riskType, BigDecimal sumInsured) {
         if (isApplicable(riskType)) {
             return applyRisk(sumInsured);
         }
